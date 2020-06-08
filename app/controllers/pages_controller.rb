@@ -1,8 +1,6 @@
 class PagesController < ApplicationController
   def index
-    if params[:question]
-      redirect_to answer_path
-    end
+    redirect_to answer_path if params[:question]
   end
 
   def answer
